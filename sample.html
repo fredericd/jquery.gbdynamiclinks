@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <title>jquery.gbdynamiclinks.js Client Sample</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="jquery.gbdynamiclinks.js"></script>
+    <script>
+    $(document).ready(function(){
+       var isbns = [];
+       $('span').each(function() {
+         isbns.push($(this).attr("isbn"));
+       });
+       if (isbns.length == 0) return;
+       $.gbDynamicLinks(isbns, function(book) { 
+           $("span[isbn='"+book.bib_key+"']").each(function() {
+               if (book.thumbnail_url == undefined) return;
+               var img = document.createElement("img");
+               img.src = book.thumbnail_url;
+               $(this).append(img); 
+           });
+       });
+    });
+    </script>
+  </head>
+  <body>
+    <span isbn="2251005714"/></span>
+    <span isbn="2251005714"/></span>
+    <span isbn="9780415480635"></span>
+    <span isbn="9780821417492"></span>
+    <span isbn="2847342257"></span>
+    <span isbn="9780563533191"></span>
+  </body>
+</html>
