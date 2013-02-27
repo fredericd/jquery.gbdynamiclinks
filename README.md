@@ -5,8 +5,8 @@ API](https://developers.google.com/books/docs/dynamic-links).
 
 ## Usage
 
-Grab ISBNs from your HTML page, and give it to the fetch method JGoogleCover
-object, with a callback function that will populate appropriately the page with
+Grab ISBNs from your HTML page, and give it to the ``gbDynmaicLinks`` jQuery method,
+with a callback function that will populate appropriately the page with
 book cover image URLs.
 
 The module extend $ jQuery object with a method named `gbDynamicLinks`. In a
