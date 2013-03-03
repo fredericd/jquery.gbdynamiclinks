@@ -1,4 +1,4 @@
-# jquery.googlecover.js
+# jquery.gbdynmaiclinks.js
 
 A jQuery based library to fetch book cover images from [Google
 API](https://developers.google.com/books/docs/dynamic-links).
